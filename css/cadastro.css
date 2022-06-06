@@ -7,7 +7,7 @@ body{
     background-attachment: fixed;
 }
 .container{
-    height: 450px;
+    height: 590px;
     width: 350px;
     padding: 5px;
     border: 0;
@@ -27,8 +27,21 @@ body{
 }
 
 .enterbutton{
-    width: 100%;
+    height: 13%;
+    border: 1px solid gray;
+    border-radius: 15px;
+    transform: translateX(115px);
+    background-image: linear-gradient(to right, transparent 50%, yellow);
+    background-position: 0%;
+    background-size: 200%;
 }
+.enterbutton:hover{
+    transform: translateX(105px);
+    transition: linear 0.3s;
+    background-position: 100%;
+    font-size: 20px;
+}
+
 .inputs{
     background-color: rgba(240, 248, 255, 0);
     color: black;
@@ -48,5 +61,11 @@ body{
 .btnpass{
     position: absolute;
     margin-left: 297px;
-    transform: translateY(-39px);
+    transform: translateY(-100px);
+}
+.error{
+    color:  red;
+    font-style: bold;
+    text-transform: uppercase;
+    text-align: center;
 }
