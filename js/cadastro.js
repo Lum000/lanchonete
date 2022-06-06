@@ -31,9 +31,8 @@ btn_enter.onclick = () =>
         senha.style.border = '2px solid red'
         c_senha.style.border = '2px solid red'
     }
-    else
+    if (senha.value == c_senha.value)
     {
-        error.innerHTML = ('')
         senha.style.border ='1px solid black'
         c_senha.style.border ='1px solid black'
     }
@@ -42,9 +41,9 @@ btn_enter.onclick = () =>
         error.innerHTML = ('Usuario não preenchido !!')
         user.style.border = ('2px solid red')
     }
-    else
+    if (user.value != '' && senha.value == c_senha.value)
     {
-        error.innerHTML = ('')
         user.style.border = ('1px solid black')
+        error.innerHTML = ('')
     }
 }

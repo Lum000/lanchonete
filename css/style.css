@@ -25,10 +25,6 @@ body{
     padding-right: 30px;
     padding-left: 30px;
 }
-
-.enterbutton{
-    width: 100%;
-}
 .inputs{
     background-color: rgba(240, 248, 255, 0);
     color: black;
@@ -49,4 +45,39 @@ body{
     position: absolute;
     margin-left: 297px;
     transform: translateY(-39px);
+}
+
+.enterbutton{
+    display: flex;
+    position: relative;
+    padding: 12px 10px;
+    font-family: 'Inter';
+    justify-content: center;
+    line-height: 28px;
+    font-weight: 300;
+    font-size: 28px;
+    color: black;
+    overflow: hidden;
+    cursor: pointer;
+}
+.enterbutton::before{
+    content: "";
+    background: rgba(255, 255, 0, 0.616);
+    width: 100%;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: all .5s;
+}
+.enterbutton:hover::before{
+    height: 300%;
+}
+.buttons{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 12px;
 }
