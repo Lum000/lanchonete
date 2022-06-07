@@ -1,9 +1,10 @@
+
 body{
     background-color: rgba(66, 66, 66, 0.61);
     padding: 30px;
     padding-top: 9%;
-    background-image: url(/imgs/lanchonete.jpg);
-    background-size: cover;
+    background: linear-gradient(106deg, rgba(251,255,8,0.53125) 0%, rgba(151,170,43,0.665703781512605) 46%, rgba(102,102,95,1) 100%);
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 .container{
@@ -12,8 +13,8 @@ body{
     padding: 5px;
     border: 0;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.171);
-    box-shadow: 4px 6px 32px 15px #000000fd;
+    background-color: rgba(255, 255, 255, 0.507);
+    box-shadow: 4px 6px 32px 15px #ffee0086;
 }
 .text{
     padding-top: 20px;

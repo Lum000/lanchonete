@@ -4,6 +4,8 @@ const btn_enter = document.querySelector('.enterbutton')
 const btn_password = document.querySelector('.btnpass')
 const error = document.querySelector('.error')
 const user = document.querySelector('.user')
+const email = document.querySelector('.email') 
+const email_error = 0
 
 btn_password.onclick = () =>
 {
@@ -27,9 +29,7 @@ btn_enter.onclick = () =>
 {
     if (senha.value != c_senha.value)
     {
-        error.innerHTML = ('SENHAS NÃO CONFEREM !')
-        senha.style.border = '2px solid red'
-        c_senha.style.border = '2px solid red'
+        giveError(senha,'Senhas não coincidem');
     }
     if (senha.value == c_senha.value)
     {
@@ -38,12 +38,33 @@ btn_enter.onclick = () =>
     }
     if (user.value == (''))
     {
-        error.innerHTML = ('Usuario não preenchido !!')
-        user.style.border = ('2px solid red')
+        giveError(user,'Usuario não pode estar em branco')
     }
     if (user.value != '' && senha.value == c_senha.value)
     {
         user.style.border = ('1px solid black')
         error.innerHTML = ('')
     }
+    if (email.value == ('')){
+        giveError(email,'Email não pode estar em branco')
+    }
+    else if (!confirmEmail(email.value)){
+        giveError(email,'Email não é valido')
+    }
+    else{
+        email.style.border = ('1px solid black')
+    }
+}
+
+function giveError(input, message){
+    error.innerHTML = (message);
+    input.style.border = '2px solid red'
+    if (input == senha){
+        senha.style.border = '2px solid red'
+        c_senha.style.border = '2px solid red'
+    }
+}
+
+function confirmEmail(email){
+    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
 }
