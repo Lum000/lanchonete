@@ -11,19 +11,57 @@
 </head>
 <body>
     <div class="container">
-        <div class="col-sm text">
-            <img src="/imgs/logo.png"><br>
-            <p class="error"></p>
-        </div><!---TEXT-->
-        <input type="text" placeholder="USUARIO" class="form-control inputs"><br>
-        <input type="password" placeholder="SENHA" class="form-control inputs password">
-        <img src="/imgs/mostrar.png" width="40px" height="40px" class="btnpass">
-        <button type="button" class="btn btn-link btn-md">Esqueceu a senha ?</button>
-        <a href="cadastro.html"><button type="button" class="btn btn-link btn-md">Cadastre-se agora !</button></a>
-        <div class="buttons">
-            <button type="submit" class="btn btn-md enterbutton">ENTRAR</button>
+        <div class="form-image">
+            <img src="/imgs/Back.jpg">
         </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button" id="btn-login">
+                        <button><a href="#">Entrar</a></button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Primeiro Nome</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Usuario" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Digite Seu Email" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="number">Numero</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Email</label>
+                        <input id="password" type="password" name="password" placeholder="Digite Sua Senha" required>
+                    </div>
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="female" name="gender">
+                            <label for="female">Feminino</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="male" name="gender">
+                            <label for="male">Masculino</label>
+                        </div>
+                        <div class="gender-input">
+                            <input type="radio" id="none" name="gender">
+                            <label for="none">Prefiro Não Dizer</label>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="continue-button">
+                    <button><a href="#">Continuar</a></button>
+                </div>
+            </form>
+        </div>
     </div>
     <script src="js/index.js"></script>
 </body>
